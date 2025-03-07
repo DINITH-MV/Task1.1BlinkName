@@ -6,7 +6,7 @@ String name[6][2] = {{"D","-.."}, {"I",".."}, {"N","-."}, {"I",".."}, {"T","-"},
 
 void loop() {
 for (int a = 0; a < 6; a++) {
-  String letter = name[a][2]; // assign the element to the "letter" variable
+  String letter = name[a][1]; // assign the element to the "letter" variable
   for (int b = 0; b < letter.length(); b++) {
     if(letter[b] == '.') { // check whether the characters of the element same as "."
       digitalWrite(LED_BUILTIN, HIGH); // make LED turn on
