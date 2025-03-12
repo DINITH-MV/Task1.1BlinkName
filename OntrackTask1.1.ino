@@ -7,7 +7,7 @@ String morseCodeAlphabet[26] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.",
 
 void loop() {
 
-String name = "dinith";
+String name = "dinith"; // Edit the value of this variable, to use another name
 String letter = "";
 
 for (int a = 0; a < name.length(); a++) {  
