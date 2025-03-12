@@ -2,11 +2,19 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT); // use the Built-In LED
 }
 
-String name[6][2] = {{"D","-.."}, {"I",".."}, {"N","-."}, {"I",".."}, {"T","-"}, {"H","...."}}; // Morse codes according to the name
+String morseCodeAlphabet[26] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", 
+"...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."}; // Morse codes
 
 void loop() {
-for (int a = 0; a < 6; a++) {
-  String letter = name[a][1]; // assign the element to the "letter" variable
+
+String name = "dinith";
+String letter = "";
+
+for (int a = 0; a < name.length(); a++) {  
+  
+  // Use ASCII values from 'a' to 'z'  
+  letter = morseCodeAlphabet[name[a] - 'a']; // Get the morse code for each letter of the name using ASCII value position  
+
   for (int b = 0; b < letter.length(); b++) {
     if(letter[b] == '.') { // check whether the characters of the element same as "."
       digitalWrite(LED_BUILTIN, HIGH); // make LED turn on
